@@ -1,18 +1,31 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 import { MdMail, MdPhone, MdLocationOn, MdFacebook    } from "react-icons/md";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaArrowRight } from "react-icons/fa";
-
-const Footer = ({ onNavigate }) => {
+import { useNavigate } from 'react-router-dom';
+const Footer = ({ onNavigate }) => {  
+  
+  const [isScrolled, setIsScrolled] = useState(false);
   const currentYear = new Date().getFullYear();
 
+  const navigate = useNavigate();
+  // const location = useLocation();
+
+   useEffect(() => {
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 20);
+      };
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
   const quickLinks = [
-    { name: 'Home', page: 'home' },
-    { name: 'About Us', page: 'about' },
-    { name: 'Services', page: 'services' },
-    { name: 'Blog', page: 'blog' },
-    { name: 'Contact', page: 'contact' }
+    { name: 'Home', page: '/' },
+    { name: 'About Us', page: '/about' },
+    { name: 'Services', page: '/services' },
+    { name: 'Blog', page: '/blog' },
+    { name: 'Contact', page: '/contact' }
   ];
 
   const services = [
@@ -44,6 +57,10 @@ const Footer = ({ onNavigate }) => {
       color: 'hover:text-sky-500'
     }
   ];
+
+   const handleNavigation = (path) => {
+    navigate(path);
+  };
 
   return (
     <footer className="bg-slate-900 text-white">
@@ -86,7 +103,7 @@ const Footer = ({ onNavigate }) => {
               {quickLinks.map((link) => (
                 <li key={link.page}>
                   <a
-                    onClick={() => onNavigate(link.page)}
+                    onClick={() => handleNavigation(link.page)}
                     className="text-slate-400 hover:text-orange-400 transition-colors cursor-pointer flex items-center space-x-2 group"
                   >
                     <span className="w-0 group-hover:w-2 h-0.5 bg-orange-400 transition-all duration-300"></span>
@@ -180,12 +197,6 @@ const Footer = ({ onNavigate }) => {
               </a>
          
             </div>
-{/* 
-            <div className="text-slate-400 text-sm flex items-center space-x-1">
-              <span>Built with</span>
-              <Heart className="w-4 h-4 text-orange-500 fill-orange-500 animate-pulse" />
-              <span>in Kenya</span>
-            </div> */}
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Home, About, Services, Contact } from "./pages";
+import { Home, About, Services,Blog, Contact } from "./pages";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
 import "./App.css";
@@ -13,6 +13,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
           {/* <Route path="/admin" element={<AdminDashboard />} /> */}

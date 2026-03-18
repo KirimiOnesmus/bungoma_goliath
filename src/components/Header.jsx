@@ -21,7 +21,7 @@ const Header = ({ currentPage, onNavigate }) => {
     { name: 'Home', page: '/' },
     { name: 'About', page: '/about' },
     { name: 'Services', page: '/services' },
-    { name: 'Blog', page: 'blog' },
+    { name: 'Blog', page: '/blog' },
     { name: 'Contact', page: '/contact' }
   ];
 
@@ -63,7 +63,7 @@ const Header = ({ currentPage, onNavigate }) => {
       </div>
 
       <nav 
-        className={`fixed top-0 lg:top-8 w-full z-50 transition-all duration-300 rounded-md ${
+        className={` top-0 lg:top-8 w-full z-50 transition-all duration-300 rounded-md ${
           isScrolled 
             ? 'bg-white/95 backdrop-blur-lg shadow-lg' 
             : 'bg-white/90 backdrop-blur-md'
