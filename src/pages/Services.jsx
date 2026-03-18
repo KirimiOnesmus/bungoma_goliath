@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { 
   FaInstagram, 
   FaBullhorn, 
@@ -12,6 +13,7 @@ import {
 } from 'react-icons/fa';
 
 const Services = () => {
+  const navigate = useNavigate();
   const [expandedService, setExpandedService] = useState(null);
 
   const services = [
@@ -187,7 +189,7 @@ const Services = () => {
 
   return (
     <div className="bg-white">
-      {/* Hero Section */}
+     
       <div className="bg-slate-900 text-white py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl">
@@ -201,7 +203,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Services Grid */}
+      
       <div className="py-20">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -236,7 +238,7 @@ const Services = () => {
                     onClick={() => setExpandedService(
                       expandedService === service.id ? null : service.id
                     )}
-                    className="text-orange-500 font-semibold flex items-center space-x-2 hover:text-orange-600 transition-colors"
+                    className="text-orange-500 font-semibold flex items-center space-x-2 cursor-pointer hover:text-orange-600 transition-colors"
                   >
                     <span>{expandedService === service.id ? 'Show Less' : 'Learn More'}</span>
                     {expandedService === service.id ? (
@@ -280,7 +282,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Pricing Section */}
+   
       <div className="py-20 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -329,7 +331,9 @@ const Services = () => {
                     ))}
                   </ul>
                   
-                  <button className={`w-full py-3 rounded-xl font-bold transition-all ${
+                  <button
+                  onClick={()=>navigate("/contact")}
+                   className={`w-full py-3 rounded-xl font-bold transition-all cursor-pointer ${
                     plan.featured
                       ? 'bg-orange-500 text-white hover:bg-orange-600'
                       : 'bg-slate-100 text-slate-900 hover:bg-slate-200'
@@ -352,7 +356,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Portfolio/Results Section */}
+  
       <div className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -382,7 +386,7 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Testimonials */}
+
       <div className="py-20 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">

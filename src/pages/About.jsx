@@ -27,16 +27,14 @@ const About = () => {
               <div className="bg-slate-200 rounded-2xl overflow-hidden shadow-xl aspect-[4/5]">
                 <div className="w-full h-full flex items-center justify-center bg-slate-300">
                   <div className="text-center p-8">
-                    <div className="w-32 h-32 mx-auto mb-4 bg-orange-500 rounded-full flex items-center justify-center">
-                      <span className="text-6xl font-black text-white">G</span>
-                    </div>
-                    <p className="text-slate-600 font-semibold">Your Photo Here</p>
+                   
+                    <p className="text-2xl font-bold text-white mb-2">Bungoma's Premier Marketing Agency(Photo to added)</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Content */}
+        
             <div className="order-1 lg:order-2">
               <h2 className="text-4xl font-black text-slate-900 mb-6">
                 Our Story
@@ -53,7 +51,7 @@ const About = () => {
                 </p>
               </div>
 
-              {/* Mission Box */}
+           
               <div className="mt-8 border-l-4 border-orange-500 bg-orange-50 p-6 rounded-r-xl">
                 <h3 className="font-bold text-slate-900 mb-2">Our Mission</h3>
                 <p className="text-slate-700">
@@ -65,7 +63,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Values Section */}
+      
       <div className="py-20 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -129,7 +127,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Stats Section */}
+
       <div className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -143,7 +141,7 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <div className="text-6xl font-black text-orange-500 mb-3">500+</div>
+              <div className="text-6xl font-black text-orange-500 mb-3">50+</div>
               <div className="text-xl font-bold text-slate-900 mb-2">Businesses Served</div>
               <p className="text-slate-600">
                 From Bungoma to Nairobi and beyond
@@ -151,7 +149,7 @@ const About = () => {
             </div>
 
             <div className="text-center">
-              <div className="text-6xl font-black text-orange-500 mb-3">5+</div>
+              <div className="text-6xl font-black text-orange-500 mb-3">2+</div>
               <div className="text-xl font-bold text-slate-900 mb-2">Years Experience</div>
               <p className="text-slate-600">
                 Deep knowledge of the Kenyan market
@@ -169,7 +167,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* How We Work */}
+     
       <div className="py-20 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
@@ -241,7 +239,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* Why Choose Us */}
+ 
       <div className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
@@ -285,7 +283,7 @@ const About = () => {
                 <div>
                   <h3 className="font-bold text-slate-900 text-lg mb-1">Proven Track Record</h3>
                   <p className="text-slate-600">
-                    500+ businesses trust us with their marketing. Check our testimonials and see what they say.
+                    50+ businesses trust us with their marketing. Check our testimonials and see what they say.
                   </p>
                 </div>
               </div>

@@ -3,12 +3,14 @@ import { FaArrowRight, FaUser, FaAward    } from "react-icons/fa";
 import { MdOutlineTrendingUp, MdOutlineStar, MdOutlineBarChart   } from "react-icons/md";
 import { FaMessage } from "react-icons/fa6"
 import { TbTargetArrow } from "react-icons/tb";
-import HomeHero from "../assets/Homepage.jpg";
+import { useNavigate } from 'react-router-dom';
+// import HomeHero from "../assets/Homepage.jpg";
 
 const Home = () => {
+  const navigate = useNavigate();
   const stats = [
-    { number: "500+", label: "Clients Served", icon: FaUser  },
-    { number: "5+", label: "Years Experience", icon: FaAward  },
+    { number: "50+", label: "Clients Served", icon: FaUser  },
+    { number: "2+", label: "Years Experience", icon: FaAward  },
     { number: "100%", label: "Results Driven", icon: MdOutlineTrendingUp  },
     { number: "24/7", label: "Support", icon: FaMessage }
   ];
@@ -58,11 +60,15 @@ const Home = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="group bg-orange-500 text-white px-10 py-4 rounded-lg font-bold text-lg cursor-pointer hover:shadow-2xl hover:shadow-orange-500/50 transition-all flex items-center justify-center space-x-2">
+                <button
+                onClick={()=>navigate("/contact")}
+                className="group bg-orange-500 text-white px-10 py-4 rounded-lg font-bold text-lg cursor-pointer hover:shadow-2xl hover:shadow-orange-500/50 transition-all flex items-center justify-center space-x-2">
                   <span>Get Started</span>
                   <FaArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
-                <button className="group bg-white/10 backdrop-blur-sm text-white px-10 py-4 rounded-lg cursor-pointer font-bold text-lg border-2 border-white/30 hover:bg-white/20 transition-all flex items-center justify-center space-x-2">
+                <button 
+                onClick={()=>navigate("/services")}
+                className="group bg-white/10 backdrop-blur-sm text-white px-10 py-4 rounded-lg cursor-pointer font-bold text-lg border-2 border-white/30 hover:bg-white/20 transition-all flex items-center justify-center space-x-2">
                   <span>View Services</span>
                   <FaArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
@@ -70,20 +76,20 @@ const Home = () => {
 
          
               <div className="flex items-center space-x-6 pt-6">
-                <div className="flex -space-x-3">
+                {/* <div className="flex -space-x-3">
                   {[1, 2, 3, 4, 5].map(i => (
                     <div key={i} className="w-12 h-12 rounded-full bg-orange-400 border-2 border-white flex items-center justify-center text-white font-bold">
                       {String.fromCharCode(64 + i)}
                     </div>
                   ))}
-                </div>
+                </div> */}
                 <div>
                   <div className="flex items-center space-x-1 mb-1">
                     {[1, 2, 3, 4, 5].map(i => (
                       <MdOutlineStar  key={i} className="w-5 h-5 text-orange-400 fill-orange-400" />
                     ))}
                   </div>
-                  <p className="text-sm text-blue-100 font-medium">Trusted by 500+ businesses</p>
+                  <p className="text-sm text-blue-100 font-medium">Trusted by 50+ businesses</p>
                 </div>
               </div>
             </div>
@@ -98,7 +104,8 @@ const Home = () => {
                     
                     <div className="text-center px-12 py-4">
                      
-                   <img src={HomeHero} alt=" bungoma goliath"/>
+                   {/* <img src={HomeHero} alt=" bungoma goliath"/> */}
+                      <p className="text-2xl font-bold text-white mb-2">Bungoma's Premier Marketing Agency</p>
                     
                   </div>
                   </div>
@@ -172,7 +179,7 @@ const Home = () => {
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Proven Track Record</h3>
               <p className="text-slate-600 leading-relaxed">
-                5+ years of delivering results for 500+ businesses across Kenya and East Africa.
+                2+ years of delivering results for 50+ businesses across Kenya and East Africa.
               </p>
             </div>
 
@@ -229,7 +236,9 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-12">
-            <button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all">
+            <button
+            onClick={()=>navigate("/services")}
+             className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-10 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all">
               View All Services
             </button>
           </div>

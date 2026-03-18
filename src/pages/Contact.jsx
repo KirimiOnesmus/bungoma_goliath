@@ -22,8 +22,7 @@ const Contact = () => {
     e.preventDefault();
     console.log('Form submitted:', formData);
     setSubmitted(true);
-    
-    // Reset form after 3 seconds
+
     setTimeout(() => {
       setFormData({
         name: '',
@@ -40,15 +39,15 @@ const Contact = () => {
     {
       icon: FaPhone,
       title: 'Phone',
-      value: '0722555330',
-      link: 'tel:0722555330',
+      value: '0712345678',
+      link: 'tel:0712345678',
       description: 'Call us during business hours'
     },
     {
       icon: FaWhatsapp,
       title: 'WhatsApp',
-      value: '0722555330',
-      link: 'https://wa.me/254722555330',
+      value: '0712345678',
+      link: 'https://wa.me/254712345678',
       description: 'Message us anytime, 24/7'
     },
     {
@@ -98,7 +97,7 @@ const Contact = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactMethods.map((method, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all">
+              <div key={idx} className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all">
                 <div className="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center mb-4">
                   <method.icon className="text-2xl text-white" />
                 </div>
@@ -126,11 +125,11 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Form and Info Section */}
+   
       <div className="py-20">
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
+            
             <div>
               <h2 className="text-4xl font-black text-slate-900 mb-4">
                 Send Us a Message
@@ -141,7 +140,7 @@ const Contact = () => {
 
               {submitted ? (
                 <div className="bg-green-50 border-2 border-green-500 rounded-xl p-8 text-center">
-                  <div className="text-6xl mb-4">✓</div>
+              
                   <h3 className="text-2xl font-bold text-green-800 mb-2">
                     Message Sent!
                   </h3>
@@ -151,10 +150,10 @@ const Contact = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
-                  {/* Name */}
+                 
                   <div>
                     <label className="block text-slate-900 font-semibold mb-2">
-                      Full Name *
+                      Full Name 
                     </label>
                     <input
                       type="text"
@@ -162,15 +161,16 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl cursor-pointer outline-none
+                       focus:border-orange-500 transition-colors"
                       placeholder="John Doe"
                     />
                   </div>
 
-                  {/* Email */}
+                  
                   <div>
                     <label className="block text-slate-900 font-semibold mb-2">
-                      Email Address *
+                      Email Address 
                     </label>
                     <input
                       type="email"
@@ -178,12 +178,13 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl outline-none cursor-pointer
+                       focus:border-orange-500 transition-colors"
                       placeholder="john@example.com"
                     />
                   </div>
 
-                  {/* Phone */}
+                  
                   <div>
                     <label className="block text-slate-900 font-semibold mb-2">
                       Phone Number
@@ -193,22 +194,24 @@ const Contact = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-orange-500 transition-colors"
-                      placeholder="0722555330"
+                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl cursor-pointer 
+                      outline-none focus:border-orange-500 transition-colors"
+                      placeholder="07123 45678"
                     />
                   </div>
 
-                  {/* Service */}
+                 
                   <div>
                     <label className="block text-slate-900 font-semibold mb-2">
-                      Service Interested In *
+                      Service Interested In 
                     </label>
                     <select
                       name="service"
                       value={formData.service}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-orange-500 transition-colors"
+                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl outline-none cursor-pointer
+                       focus:border-orange-500 transition-colors"
                     >
                       <option value="">Select a service...</option>
                       {services.map(service => (
@@ -219,10 +222,10 @@ const Contact = () => {
                     </select>
                   </div>
 
-                  {/* Message */}
+                  
                   <div>
                     <label className="block text-slate-900 font-semibold mb-2">
-                      Your Message *
+                      Your Message 
                     </label>
                     <textarea
                       name="message"
@@ -230,15 +233,16 @@ const Contact = () => {
                       onChange={handleChange}
                       required
                       rows="5"
-                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-orange-500 transition-colors resize-none"
-                      placeholder="Tell us about your business and how we can help..."
+                      className="w-full px-4 py-3 border-2 border-slate-200 rounded-xl outline-none cursor-pointer
+                       focus:border-orange-500 transition-colors resize-none"
+                      placeholder="Tell us about your business and how we can help."
                     ></textarea>
                   </div>
 
-                  {/* Submit Button */}
+          
                   <button
                     type="submit"
-                    className="w-full bg-orange-500 text-white py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl"
+                    className="w-full bg-orange-500 text-white py-4 rounded-xl font-bold text-lg cursor-pointer hover:bg-orange-600 transition-all shadow-lg hover:shadow-xl"
                   >
                     Send Message
                   </button>
@@ -246,11 +250,8 @@ const Contact = () => {
               )}
             </div>
 
-            {/* Additional Info */}
+          
             <div className="space-y-8">
-
-
-              {/* Social Media */}
               <div className="bg-slate-50 rounded-xl p-8">
                 <h3 className="text-2xl font-bold text-slate-900 mb-6">
                   Follow Us
@@ -310,7 +311,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* FAQ Section */}
+     
       <div className="py-20 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
@@ -319,7 +320,7 @@ const Contact = () => {
             </h2>
 
             <div className="space-y-6">
-              <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="bg-white rounded-xl p-6 ">
                 <h3 className="text-lg font-bold text-slate-900 mb-2">
                   How quickly will you respond?
                 </h3>
@@ -328,7 +329,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="bg-white rounded-xl p-6 ">
                 <h3 className="text-lg font-bold text-slate-900 mb-2">
                   Do you offer free consultations?
                 </h3>
@@ -337,7 +338,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              <div className="bg-white rounded-xl p-6 shadow-lg">
+              <div className="bg-white rounded-xl p-6 ">
                 <h3 className="text-lg font-bold text-slate-900 mb-2">
                   What information should I include in my message?
                 </h3>

@@ -37,9 +37,9 @@ const Header = ({ currentPage, onNavigate }) => {
         <div className="container mx-auto px-6 py-2">
           <div className="flex items-center justify-between text-sm">
             <div className="flex items-center space-x-6">
-              <a href="tel:0722555330" className="flex items-center space-x-2 hover:text-orange-400 transition-colors">
+              <a href="tel:0712345678" className="flex items-center space-x-2 hover:text-orange-400 transition-colors">
                 <MdPhone  className="w-4 h-4" />
-                <span>0722555330</span>
+                <span>0712345678</span>
               </a>
               <a href="mailto:info@goliathmarketing.co.ke" className="flex items-center space-x-2 hover:text-orange-400 transition-colors">
                 <MdMail  className="w-4 h-4" />
@@ -63,7 +63,7 @@ const Header = ({ currentPage, onNavigate }) => {
       </div>
 
       <nav 
-        className={` top-0 lg:top-8 w-full z-50 transition-all duration-300 rounded-md ${
+        className={`sticky top-0 lg:top-8 w-full z-50 transition-all duration-300 rounded-md ${
           isScrolled 
             ? 'bg-white/95 backdrop-blur-lg shadow-lg' 
             : 'bg-white/90 backdrop-blur-md'
@@ -163,11 +163,11 @@ const Header = ({ currentPage, onNavigate }) => {
 
               <div className="pt-4 border-t border-slate-200 space-y-3">
                 <a
-                  href="tel:0722555330"
+                  href="tel:0712345678"
                   className="flex items-center space-x-3 px-4 py-2 text-slate-700 hover:text-orange-500 transition-colors"
                 >
                   <MdPhone className="w-5 h-5" />
-                  <span className="font-semibold">0722555330</span>
+                  <span className="font-semibold">0712345678</span>
                 </a>
                 <a
                   href="mailto:info@goliathmarketing.co.ke"

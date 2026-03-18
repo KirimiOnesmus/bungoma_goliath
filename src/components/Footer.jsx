@@ -144,7 +144,7 @@ const Footer = ({ onNavigate }) => {
                   <MdPhone className="w-5 h-5 mt-0.5 group-hover:scale-110 transition-transform" />
                   <div>
                     <p className="font-semibold text-white">Phone / WhatsApp</p>
-                    <p>0722555330</p>
+                    <p>0712345678</p>
                   </div>
                 </a>
               </li>
